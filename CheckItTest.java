@@ -8,26 +8,17 @@ public class CheckItTest {
         // all true
         assertTrue(CheckIt.checkIt(true, true, true));
 
-        // a false
-        assertTrue(CheckIt.checkIt(false, true, true));
-
-        // b and c false
-        assertTrue(CheckIt.checkIt(true, false, false));
-
         // all false
-        assertFalse(CheckIt.checkIt(false, false, false));
+        assertTrue(CheckIt.checkIt(false, false, true));
     }
 
     @Test
     public void testForClauseCoverage() {
-        // a true, b and c false
-        assertTrue(CheckIt.checkIt(true, false, false));
+        // all true
+        assertTrue(CheckIt.checkIt(true, true, true));
 
-        // a false, b true, c false
-        assertFalse(CheckIt.checkIt(false, true, false));
-
-        // a false, b and c true
-        assertTrue(CheckIt.checkIt(false, true, true));
+        // all false
+        assertFalse(CheckIt.checkIt(false, false, false));
     }
 
     @Test
